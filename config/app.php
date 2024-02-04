@@ -168,6 +168,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Example Service Providers...
+         */
+        Src\Example\Task\Infrastructure\Services\TaskRouteServiceProvider::class,
+        Src\Example\User\Infrastructure\Services\UserRouteServiceProvider::class,
+
     ])->toArray(),
 
     /*
