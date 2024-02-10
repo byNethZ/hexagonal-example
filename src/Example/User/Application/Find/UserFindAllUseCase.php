@@ -2,23 +2,19 @@
 
 namespace Src\Example\User\Application\Find;
 
+use Src\Example\User\Domain\Contracts\UserRepositoryContract;
+
 class UserFindAllUseCase
 {
+    private $userRepository;
 
-    public function __construct()
+    public function __construct(UserRepositoryContract $userRepository)
     {
+        $this->userRepository = $userRepository;
     }
 
     public function __invoke(): array
     {
-        return [
-            'users' => [
-                [
-                    'id' => 1,
-                    'name' => 'John Doe',
-                    'email' => 'johndoe@example.com'
-                ]
-            ]
-        ];
+        return $this->userRepository->findAll();
     }
 }

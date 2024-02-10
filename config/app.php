@@ -174,6 +174,7 @@ return [
          */
         Src\Example\Task\Infrastructure\Services\TaskRouteServiceProvider::class,
         Src\Example\User\Infrastructure\Services\UserRouteServiceProvider::class,
+        Src\Example\User\Infrastructure\Services\DependencyServiceProvider::class,
 
     ])->toArray(),
 
